@@ -1,0 +1,20 @@
+{
+  "name": "poc-game-idea",
+  "version": "1.0.0",
+  "description": "testing ideas for a game",
+  "scripts": {
+    "start": "node --experimental-modules index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thearegee/poc-game-idea.git"
+  },
+  "author": "Robin Glen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thearegee/poc-game-idea/issues"
+  },
+  "homepage": "https://github.com/thearegee/poc-game-idea#readme",
+  "dependencies": {}
+}
