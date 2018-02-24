@@ -28,6 +28,10 @@ function scaleBucketElement(size) {
   )[0].style.height = `${size}px`;
 }
 
+function getCurrentBucketSize() {
+  return bucket.size;
+}
+
 function bucketScale() {
   setInterval(() => {
     if (bucket.size >= defaults.size.max) {
@@ -43,4 +47,4 @@ function resetBucket() {
   scaleBucketElement(bucket.size);
 }
 
-export { init, resetBucket };
+export { init, resetBucket, getCurrentBucketSize };
