@@ -1,15 +1,15 @@
 import { resetBucket, getCurrentBucketSize } from '/js/bucket.js';
+import { mapSplatToArray } from '/js/canvus.js';
 
 const defaults = {
   selectors: {
     canvus: 'game-area',
     splatt: 'splatt'
   },
-  color: '#d0793b'
+  color: '#a13ea2'
 };
 
 function init() {
-  console.log('resetBucket');
   const gameArea = document.getElementsByClassName(
     defaults.selectors.canvus
   )[0];
@@ -32,9 +32,7 @@ function splattPaint(x, y, size) {
 
 function interactWithGameArea(event) {
   const currentBucketSize = getCurrentBucketSize();
-  console.log(
-    `Clicked x:${event.clientX} y:${event.clientY} - ${currentBucketSize}`
-  );
+  mapSplatToArray(event.clientX, event.clientY, currentBucketSize);
   splattPaint(event.clientX, event.clientY, currentBucketSize);
   resetBucket();
 }

@@ -1,13 +1,13 @@
 const defaults = {
   size: {
-    min: 10,
-    max: 150,
+    min: 0,
+    max: 100,
     growth: 1
   },
   selectors: {
     bucket: 'bucket'
   },
-  timer: 10,
+  timer: 20,
   color: '#d0793b'
 };
 
@@ -22,10 +22,7 @@ function init() {
 function scaleBucketElement(size) {
   document.getElementsByClassName(
     defaults.selectors.bucket
-  )[0].style.width = `${size}px`;
-  document.getElementsByClassName(
-    defaults.selectors.bucket
-  )[0].style.height = `${size}px`;
+  )[0].style.width = `${size * 5}px`;
 }
 
 function getCurrentBucketSize() {
