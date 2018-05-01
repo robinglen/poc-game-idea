@@ -7,7 +7,7 @@ const defaults = {
   selectors: {
     bucket: 'bucket'
   },
-  timer: 20,
+  timer: 10,
   color: '#d0793b'
 };
 

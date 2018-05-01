@@ -2,12 +2,24 @@ body {
   background: #282731;
 }
 
+.player-switch {
+  float: right;
+}
+
+.switch-button {
+  color: #fff;
+  background: #a13ea2;
+}
+
 .game-area {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 517px;
   height: 435px;
+  background: #303033;
+  overflow: hidden;
+  float: left;
 }
 
 .controls {
@@ -35,4 +47,18 @@ body {
 .splatt {
   z-index: 100;
   position: absolute;
+}
+
+.scores {
+  color: #fff;
+  width: 100%;
+  z-index: 5000;
+}
+
+.p1-score {
+  float: left;
+}
+
+.p2-score {
+  float: right;
 }

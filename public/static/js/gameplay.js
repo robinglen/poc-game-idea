@@ -1,12 +1,12 @@
 import { resetBucket, getCurrentBucketSize } from '/js/bucket.js';
 import { mapSplatToArray } from '/js/canvus.js';
+import { currentPlayer } from '/js/players.js';
 
 const defaults = {
   selectors: {
     canvus: 'game-area',
     splatt: 'splatt'
-  },
-  color: '#a13ea2'
+  }
 };
 
 function init() {
@@ -17,6 +17,7 @@ function init() {
 }
 
 function splattPaint(x, y, size) {
+  const player = currentPlayer();
   const gameArea = document.getElementsByClassName(
     defaults.selectors.canvus
   )[0];
@@ -26,7 +27,7 @@ function splattPaint(x, y, size) {
   splatt.style.height = `${size}px`;
   splatt.style.top = `${y}px`;
   splatt.style.left = `${x}px`;
-  splatt.style.background = defaults.color;
+  splatt.style.background = player.color;
   gameArea.appendChild(splatt);
 }
 
